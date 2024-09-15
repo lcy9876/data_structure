@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "GCC",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/x86_64-w64-mingw32",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../include/c++/13.2.0/backward",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/include-fixed",
+                "C:/Users/20419/Downloads/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "C:/Users/20419/Downloads/MinGW/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

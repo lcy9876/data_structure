@@ -1,0 +1,87 @@
+{
+  //?系统配置
+  "debug.onTaskErrors": "debugAnyway",          
+  //调试时忽略异常                            
+  "diffEditor.wordWrap": "on",
+  //视距折行                                               
+  "editor.cursorBlinking": "smooth", 
+  //光标闪烁
+  "editor.cursorSmoothCaretAnimation": "on", 
+  //光标动画
+  "editor.fontSize": 20, 
+  //字体大小
+  "editor.guides.bracketPairs": true, 
+  //匹配括号
+  "editor.mouseWheelZoom": true, 
+  //缩放
+  "editor.smoothScrolling": true,
+  //平滑滚动
+  "editor.suggestSelection": "first",
+  //建议选择
+  "editor.wordWrap": "on",
+  //视距折行
+  "editor.rulers":[120],
+  //设置标尺
+  "editor.tabSize": 4,
+  //设置tab缩进
+  "explorer.confirmDelete": false,
+  //删除文件时不询问
+  "files.autoGuessEncoding": true,
+  //自动猜测编码
+  "files.autoSave": "afterDelay",
+  //自动保存
+  "security.workspace.trust.untrustedFiles": "open",
+  //信任打开的文件
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
+  //禁止多行粘贴警告
+  "terminal.integrated.smoothScrolling": true,
+  //平滑滚动
+  "window.dialogStyle": "custom",
+  //图标主题
+  "workbench.list.smoothScrolling": true,
+  //平滑滚动
+
+  //?c语言插件配置
+  "cmake.configureOnOpen": true,
+  //在打开文件时配置CMake项目
+
+  //?oneDarkPro主题配置
+  "oneDarkPro.italic": false,
+  //不使用斜体
+
+  //?codesnap插件配置
+  "codesnap.backgroundColor": "#f2f2f2",
+  //背景颜色
+  "codesnap.boxShadow": "5px 5px 60px 0px #888888",
+  //阴影
+  "codesnap.containerPadding": "3em",
+  //容器内边距
+  "codesnap.roundedCorners": true,
+  //圆角
+  "codesnap.showWindowControls": false,
+  //显示窗口控制按钮
+  "codesnap.showWindowTitle": false,
+  //显示窗口标题
+  "codesnap.showLineNumbers": true,
+  //显示行号
+  "codesnap.realLineNumbers": false,
+  //使用真实行号
+  "codesnap.transparentBackground": false,
+  //透明背景
+  "codesnap.target": "container",
+  //目标
+
+  //?codegeex插件配置
+  "Codegeex.Comment.LanguagePreference": "中文",
+  //语言偏好
+  "Codegeex.CompletionDelay": 1,
+  //完成延迟
+  "Codegeex.GenerationPreference": "line by line",
+  //生成偏好
+  "Codegeex.UseSimilarFileForPrompt": true,
+  //使用相似文件进行提示
+  "Codegeex.Privacy": false,
+  //不使用隐私
+  "cmake.showOptionsMovedNotification": false,
+  //不显示选项已移动的通知
+}
