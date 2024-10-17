@@ -18,7 +18,10 @@
               "-Wall",//获取警告
               "-static-libgcc",
               "-fexec-charset=GBK",//按GBK编码
-              "-std=c11"//选择C标准,这里按照你需要的换
+              "-std=c11",//选择C标准,这里按照你需要的换
+              "-I",
+              "D:\\OpenSSL-Win64\\include",
+              "-L"
           ],
           "group": {
               //把该任务放在build组中

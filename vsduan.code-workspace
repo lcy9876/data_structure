@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"name": "vsduan",
+			"path": "."
+		}
+	],
+	"settings": {
+		"debug.onTaskErrors": "debugAnyway",
+		"diffEditor.wordWrap": "on",
+		"editor.cursorBlinking": "smooth",
+		"editor.cursorSmoothCaretAnimation": "on",
+		"editor.fontSize": 20,
+		"editor.guides.bracketPairs": true,
+		"editor.mouseWheelZoom": true,
+		"editor.smoothScrolling": true,
+		"editor.suggestSelection": "first",
+		"editor.wordWrap": "on",
+		"editor.rulers": [
+			120
+		],
+		"editor.tabSize": 4,
+		"explorer.confirmDelete": false,
+		"files.autoGuessEncoding": true,
+		"files.autoSave": "afterDelay",
+		"terminal.integrated.enableMultiLinePasteWarning": "always",
+		"terminal.integrated.smoothScrolling": true,
+		"workbench.list.smoothScrolling": true,
+		"cmake.configureOnOpen": true
+	}
+}
