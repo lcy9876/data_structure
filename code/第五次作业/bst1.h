@@ -434,7 +434,7 @@ void remove(const Comparable &val, BinaryNode * &xx)
 	{
 		// 1. 从root开始寻找值为val的节点，cur指向它
 		BinaryNode *pre = nullptr;  //记录父节点
-		BinaryNode *cur = root;
+		BinaryNode *cur = xx;
 		while(cur != nullptr)
 		{
 			if(val < cur->element)
@@ -480,7 +480,7 @@ void remove(const Comparable &val, BinaryNode * &xx)
 
 		if(pre == nullptr) // cur指向的根节点
 		{
-			root = child;
+			xx = child;
 		}
 		else
 		{
