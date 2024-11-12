@@ -5,73 +5,67 @@
 \setlength{\paperheight}{29.7cm}
 \setlength{\textheight}{25.3cm}
 
+% useful packages.
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{layout}
+\usepackage{listings}
+\usepackage{float, caption}
+\usepackage{pifont}
 
+\lstset{
+    basicstyle=\ttfamily, basewidth=0.5em
+}
 
+% some common command
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+\newcommand{\difFrac}[2]{\frac{\dif #1}{\dif #2}}
+\newcommand{\pdfFrac}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\OFL}{\mathrm{OFL}}
+\newcommand{\UFL}{\mathrm{UFL}}
+\newcommand{\fl}{\mathrm{fl}}
+\newcommand{\op}{\odot}
+\newcommand{\Eabs}{E_{\mathrm{abs}}}
+\newcommand{\Erel}{E_{\mathrm{rel}}}
 
 \begin{document}
 
-李春阳, 学号3230101204
+\pagestyle{fancy}
+\fancyhead{}
+\lhead{李春阳, 3230101204}
+\chead{第六次作业}
+\rhead{Nov.11th, 2024}
+\section{设计思路}
+这段代码是一个二叉搜索树（Binary Search Tree, BST）的实现，它包含了删除节点、克隆树、获取树高、更新节点高度、右旋、左旋和平衡树的操作。
 
-{数据结构与算法第六次作业}
-
-Nov.6th, 2024
-
-\section{测试程序的设计思路}
-
-我首先修改原有的remove函数为removeold
-
-新编写了remove函数
-
-用非递归实现AVL树的删除操作
-
-从一棵二叉搜索树中删除一个节点之前必须先找到该节点所在的位置
-
-	删除操作会引起很多后果 , 主要来自两个方面 :
-    
-	一方面删除树中的一个节点必然会导致原本连通的树结构发生阻隔
-    
-	其次 , 当二叉搜索树中的某个节点被删除之后 , 树中的有序关系可能遭到破坏
-    
-    具体而言分为三种情况
-    
-	1.删除的节点没有孩子
-    
-	2.删除的节点只有一个孩子
-    
-	3.删除的节点有两个孩子
-    
-	1和2可以看成是一种类型 , 只有一个孩子 , 这个孩子是空(nullptr)
-    
-	情况三的处理方法 , 使用前驱结点或者后继节点代替该节点 , 删除前驱即可
-    
-	前驱结点 : 当前节点的左子树中 , 元素的最大值
-    
-	后继节点 : 当前节点的右子树中 , 元素的最小值
-    
-流程
-1. 从root开始寻找值为val的节点，cur指向它
-
-2. 先判断是否满足情况3，如果满足，需要找cur的前驱节点，用前驱把cur节点的值给覆盖掉
-
-直接删前驱
-
-3. 删除情况1和情况2   直接删除cur指针指向的节点就OK
-\section{测试的结果}
-
-测试结果一切正常。
-
-我用 valgrind 进行测试，发现没有发生内存泄露。
-
-\section{（可选）bug报告}
-
-我没有发现 bug，：
+功能特点
+模板类设计：通过模板参数Comparable，该BST类可以存储任何可比较的数据类型。
+异常处理：定义了多个异常类，如UnderflowException和IllegalArgumentException，用于处理特定的错误情况。
+自平衡功能：通过balance函数和相关的旋转操作（rightRotate和leftRotate），保持树的平衡，确保操作的效率。
+拷贝和移动语义：提供了拷贝构造函数、移动构造函数、拷贝赋值运算符和移动赋值运算符，支持资源的有效管理。
+递归和循环操作：结合递归和循环方法实现树的遍历和操作，提高效率。
+内存管理：通过makeEmpty函数释放树中所有节点占用的内存，避免内存泄露。
+主要函数和方法
+构造函数和析构函数：初始化和销毁BST，包括拷贝和移动构造函数。
+findMin和findMax：查找并返回树中的最小和最大元素。
+contains：检查树中是否包含指定的元素。
+isEmpty：检查树是否为空。
+printTree：打印树的结构。
+makeEmpty：清空树中的所有元素。
+insert：插入一个元素到树中，支持常量引用和右值引用。
+remove：从树中移除指定的元素。
+clone：克隆整棵树，实现深拷贝。
+section；测试结果测试结果正常，没有发生元素复制，没有段错误。
+利用 valgrind 进行测试，没有发生内存泄露。
 
 
 
 \end{document}
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: t
-%%% End: 
 
