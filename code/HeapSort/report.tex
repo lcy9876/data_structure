@@ -1,0 +1,78 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{geometry, CJKutf8}
+\geometry{margin=1.5cm, vmargin={0pt,1cm}}
+\setlength{\topmargin}{-1cm}
+\setlength{\paperheight}{29.7cm}
+\setlength{\textheight}{25.3cm}
+
+
+
+
+\begin{document}
+
+李春阳, 学号3230101204
+
+{数据结构与算法第七次作业}
+
+Nov.30th, 2024
+
+\section{测试程序的设计思路}
+
+新编写了 heapsort和heapify函数
+
+采用堆排序 利用堆的性质进行排序，将数组看作完全二叉树，通过构建最大堆或最小堆来实现排序
+
+新编写了 check函数
+
+比较排序后序列是否升序 验证排序是否正确
+
+函数用于检查vector是否已升序排序
+
+新编写 printlist函数
+
+用于输出任意一段序列 看看是否正确
+
+这四个函数放在H文件里
+
+在主程序里 构建了四个1000000数的有序序列 倒序序列 随机序列 部分重复序列
+
+用heapsort进行了堆排序
+
+用chrono类函数进行时间排序计算  以微秒为单位
+
+并测试了C++内置的Sortheap的排序时间 进行了对比
+
+对比结果如下
+
+有序序列    535184微秒（我的函数）  608276微秒（C++排序函数）
+
+逆序序列    503523微秒（我的函数）  576557微秒（C++排序函数）
+
+随机序列    633122微秒（我的函数）  697243微秒（C++排序函数）
+
+部分重复序列    633122微秒（我的函数）  697243微秒（C++排序函数）
+
+测试结果一切正常。
+
+我的heapsort函数时间平均时间复杂度 O（n log n)
+
+最坏时间复杂度 O（n log n)
+
+与sortheap函数效率基本一致 
+
+我用 valgrind 进行测试，发现没有发生内存泄露。
+
+\section{（可选）bug报告}
+
+我没有发现 bug，：
+
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+
